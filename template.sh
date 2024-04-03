@@ -14,7 +14,7 @@ function display_help() {
 }
 
 function display_template_list() {
-    find $TEMPLATE_PATH -type d -not -path "$TEMPLATE_PATH/.git/*"
+    find $TEMPLATE_PATH -depth -3 -type d -not -path "$TEMPLATE_PATH/.git/*"
 }
 
 #Command line format: [-u ] 
