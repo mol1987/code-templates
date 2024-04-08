@@ -35,5 +35,5 @@ if [ $OPTIND -eq 1 ]; then
    exit 1
 fi 
 
-cp -r $TEMPLATE_PATH/$TEMPLATE $DEST_PATH/$NAME
+cp -r $TEMPLATE_PATH$TEMPLATE $DEST_PATH$NAME
 
