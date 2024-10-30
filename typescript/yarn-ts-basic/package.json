@@ -1,0 +1,36 @@
+{
+  "name": "yarn-ts-project",
+  "version": "0.1.0",
+  "description": "A basic yarn ts project",
+  "main": "./dist/index.js",
+  "author": "Fred Mol",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.2.4",
+    "ts-treemap": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "@typescript-eslint/eslint-plugin": "^4.21.0",
+    "@typescript-eslint/parser": "^4.21.0",
+    "eslint": "^7.24.0",
+    "markdownlint": "^0.23.1",
+    "markdownlint-cli": "^0.27.1",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1"
+  },
+  "scripts": {
+    "build": "tsc --project ./tsconfig.json",
+    "build2": "tsc -w --project ./tsconfig.json",
+    "build:watch": "tsc --project ./tsconfig.json --watch",
+    "clean:all": "rm -rf ./dist ./node_modules",
+    "clean": "rm -rf ./dist",
+    "todos": "grep -R TODO src/*",
+    "main": "node ./dist/index.js",
+    "lint-md": "markdownlint",
+    "lint-md-all": "markdownlint *.md docs/",
+    "lint-prettier": "prettier --check --loglevel warn",
+    "lint-prettier-all": "prettier --check .",
+    "lint-ts": "eslint --ext .ts"
+  }
+}
